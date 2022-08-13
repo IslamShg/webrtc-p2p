@@ -39,7 +39,7 @@ const init = async () => {
   await client.login({ uid, token })
 
   //? 2: create and join the channel
-  channel = client.createChannel('main')
+  channel = client.createChannel(roomId)
   await channel.join()
 
   channel.on('MemberJoined', handleUserJoined)
