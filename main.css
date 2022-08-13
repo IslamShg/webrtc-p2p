@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+  box-sizing: border-box;
+}
+
+#videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-player {
+  background-color: #000;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+#user-2 {
+  display: none;
+}
+
+.smallFrame {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 170px;
+  width: 300px;
+  border-radius: 5px;
+  z-index: 999;
+  border: 1px solid #b366f9;
+}
+
+.controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1em;
+}
+
+.control-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(179, 102, 249, 0.9);
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.control-container img {
+  height: 30px;
+  width: 30px;
+}
+
+#leave-btn {
+  background-color: rgb(255, 80, 80, 1);
+}
+
+@media screen and (max-width: 600px) {
+  .smallFrame {
+    height: 80px;
+    width: 120px;
+  }
+
+  .control-container img {
+    height: 20px;
+    width: 20px;
+  }
+}
